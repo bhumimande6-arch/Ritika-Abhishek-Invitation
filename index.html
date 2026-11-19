@@ -118,68 +118,6 @@ section{padding:90px 7%;position:relative}
 
 
  
-.side-decoration{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  width:75px;
-  height:220px;
-  pointer-events:none;
-  z-index:5;
-}
-
-.side-left{left:-25px}
-.side-right{right:-25px}
-
-.side-decoration:before,
-.side-decoration:after{
-  content:"";
-  position:absolute;
-  width:48px;
-  height:48px;
-  border-radius:50% 50% 45% 45%;
-  background:
-    radial-gradient(ellipse at 50% 50%,
-      #fff0e8 0 12%,
-      #e9a8b5 13% 30%,
-      #c96f87 31% 43%,
-      transparent 45%);
-  filter:drop-shadow(0 3px 5px #21071166);
-}
-
-.side-decoration:before{
-  top:15px;
-  left:12px;
-}
-
-.side-decoration:after{
-  bottom:15px;
-  right:5px;
-}
-
-.side-decoration span{
-  position:absolute;
-  font-size:0;
-  width:28px;
-  height:28px;
-  border:1px solid #d8b36a;
-  border-radius:50% 50% 5px 50%;
-  background:radial-gradient(ellipse at 50% 80%,#fff0ae,#d8a34e 45%,#8e5425 70%);
-  box-shadow:0 0 14px #e7b85c66;
-}
-
-.side-decoration span:first-child{
-  top:90px;
-  left:5px;
-  transform:rotate(-25deg);
-}
-
-.side-decoration span:last-child{
-  top:145px;
-  right:8px;
-  transform:rotate(25deg);
-}
- 
 
 .envelope{
   position:relative;
@@ -217,14 +155,17 @@ section{padding:90px 7%;position:relative}
   width:84%;
   height:78%;
   top:8%;
-  background:#fff9ed;
+  background:linear-gradient(145deg,#fffdf6,#f8ecd7);
   display:flex;
   align-items:center;
   justify-content:center;
   flex-direction:column;
   color:var(--maroon);
   transition:transform 1s ease .3s;
-  border:1px solid #d8b36a88;
+  border:1px solid #c9a45e;
+  box-shadow:inset 0 0 18px #d8b36a33;
+  font-family:'Cormorant Garamond',serif;
+  letter-spacing:1px;
 }
 
 .envelope-letter span:first-child{
@@ -240,29 +181,34 @@ section{padding:90px 7%;position:relative}
 .envelope-flap{
   position:absolute;
   inset:0;
-  background:linear-gradient(145deg,#f8e6c7,#e6c28e);
+  background:
+    linear-gradient(145deg,#fff0d5 0%,#e9c991 48%,#d3aa6c 100%);
   clip-path:polygon(0 0,100% 0,50% 58%);
   transform-origin:top;
   transition:transform .8s ease;
   z-index:3;
+  filter:drop-shadow(0 2px 2px #9b713655);
 }
-
 .envelope-front{
   position:absolute;
   inset:0;
-  background:linear-gradient(135deg,#f2d8ae,#d6ad70);
+  background:
+    radial-gradient(circle at 50% 72%, #fff1cf 0 2px, transparent 3px),
+    linear-gradient(135deg,#f8e8cc,#d9b477,#f4dfb9);
   clip-path:polygon(0 100%,0 0,50% 56%,100% 0,100% 100%);
   z-index:2;
 }
 
 .envelope-front:after{
-  content:"❀                         ❀";
+  content:"✧  ❀  ✧";
   position:absolute;
   bottom:13px;
   width:100%;
   text-align:center;
-  color:#a47740;
-  font-size:21px;
+  color:#9b7136;
+  font-size:24px;
+  letter-spacing:9px;
+  text-shadow:0 1px 2px #fff5dc;
 }
 
 .envelope-seal{
@@ -271,18 +217,24 @@ section{padding:90px 7%;position:relative}
   top:43%;
   left:50%;
   transform:translate(-50%,-50%);
-  width:52px;
-  height:52px;
+  width:58px;
+  height:58px;
   border-radius:50%;
-  background:radial-gradient(circle,#d9b36c,#94662e);
-  color:#fff3d4;
-  border:2px solid #f5dca2;
-  outline:1px solid #a77b43;
+  background:
+    radial-gradient(circle at 35% 28%,#f9e7ae 0%,#d6aa55 35%,#9b672c 72%,#70451f 100%);
+  color:#fff4d2;
+  border:2px solid #f8dfa0;
+  outline:2px solid #b58a49;
   display:grid;
   place-items:center;
-  font:26px 'Cormorant Garamond',serif;
-  box-shadow:0 3px 12px #4b101f55;
+  font:28px 'Cormorant Garamond',serif;
+  text-shadow:0 1px 2px #68431f;
+  box-shadow:
+    0 4px 12px #4b101f66,
+    inset 0 2px 5px #fff4cf88,
+    inset 0 -3px 5px #70451f66;
 }
+
 
 .envelope.open .envelope-flap{
   transform:rotateX(180deg);
@@ -524,15 +476,7 @@ footer p{font-size:9px;letter-spacing:3px;margin-top:18px}
 
     <div class="envelope-stage">
 
-      <div class="side-decoration side-left">
-        <span>🌸</span>
-        <span>🪔</span>
-      </div>
-
-      <div class="side-decoration side-right">
-        <span>🪔</span>
-        <span>🌸</span>
-      </div>
+      
 
       <div class="envelope" id="envelope"
            onclick="openInvitation()">
