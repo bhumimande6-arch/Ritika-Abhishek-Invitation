@@ -62,6 +62,22 @@ section{padding:90px 7%;position:relative}
 #opening.hidden{opacity:0;visibility:hidden;pointer-events:none}
 .opening-content{width:min(440px,100%)}
 .ganesh{
+  .ganpati-opening{
+  width:125px;
+  height:125px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto 15px;
+  filter:drop-shadow(0 5px 15px #d8b36a55);
+}
+
+.ganpati-hero{
+  width:150px;
+  height:150px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto 20px;
+}
   color:var(--lightgold);
   font-size:42px;
   margin-bottom:12px;
@@ -318,7 +334,7 @@ footer p{font-size:9px;letter-spacing:3px;margin-top:18px}
 <!-- Envelope opening -->
 <div id="opening">
   <div class="opening-content">
-    <div class="ganesh">ॐ श्री गणेशाय नमः</div>
+    <img src="photos/ganpati.png.png" class="ganpati-opening" alt="Ganpati Bappa">
     <p class="opening-small">Together with their families</p>
 
     <div class="envelope" id="envelope" onclick="openInvitation()">
@@ -345,7 +361,7 @@ footer p{font-size:9px;letter-spacing:3px;margin-top:18px}
 <!-- Hero -->
 <section id="home">
   <div class="hero-inner">
-    <div class="hero-ganesh">॥ श्री गणेशाय नमः ॥</div>
+    <img src="photos/ganpati.png.png" class="ganpati-hero" alt="Ganpati Bappa">
     <p class="hero-invite">With the blessings of our families</p>
     <h1 class="hero-names">Ritika <span class="amp">&</span><br>Abhishek</h1>
     <div class="ornament">✧ ❧ ✧</div>
