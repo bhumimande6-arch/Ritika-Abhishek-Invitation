@@ -417,12 +417,48 @@ section{padding:90px 7%;position:relative}
 }
 
 footer{
-  background:#2d0913;color:#f0d7ac;
-  text-align:center;padding:65px 20px
+  footer {
+  background: radial-gradient(ellipse at center, #421321 0%, #260811 75%);
+  color: #e8d2ad;
+  text-align: center;
+  padding: 65px 20px 55px;
+  border-top: 1px solid #a98a5b66;
 }
-footer .script{font-size:48px}
-footer p{font-size:9px;letter-spacing:3px;margin-top:18px}
 
+.footer-divider {
+  color: #b99a68;
+  font-size: 20px;
+  letter-spacing: 8px;
+  margin-bottom: 25px;
+}
+
+.footer-couple-art {
+  display: block;
+  width: min(420px, 90%);
+  height: auto;
+  margin: 25px auto 20px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 15px #0003);
+}
+
+footer .script {
+  font-size: 52px;
+  color: #e8d2ad;
+  margin-top: 20px;
+}
+
+footer p:not(.script) {
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 18px;
+  color: #d9bd91;
+}
+
+footer .ornament {
+  color: #b99a68;
+  margin-top: 25px;
+}
+  
 /* Music button */
 #musicBtn{
   position:fixed;bottom:20px;right:20px;z-index:10;
@@ -659,13 +695,24 @@ footer p{font-size:9px;letter-spacing:3px;margin-top:18px}
 </section>
 
 <footer>
-    <p class="script">Ritika & Abhishek</p>
-  
+  <footer>
+  <div class="footer-divider">✧ ❧ ✧</div>
+
   <div class="ganesh">॥ श्री गणेशाय नमः ॥</div>
-  
+
+  <img
+    class="footer-couple-art"
+    src="photos/okay.jpg"
+    alt="Bride and Groom"
+  >
+
+  <p class="script">Ritika & Abhishek</p>
+
   <p>14 DECEMBER 2026 · WITH LOVE & BLESSINGS</p>
-  <div class="ornament" style="margin-top:25px">✧ ❧ ✧</div>
+
+  <div class="ornament">✧ ❧ ✧</div>
 </footer>
+   
 
 <script>
 const opening = document.getElementById("opening");
