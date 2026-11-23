@@ -778,6 +778,22 @@ function updateCountdown(){
 
 updateCountdown();
 setInterval(updateCountdown,1000);
+  const weddingMusic = document.getElementById("weddingMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+function toggleMusic() {
+  if (weddingMusic.paused) {
+    weddingMusic.play();
+    musicBtn.classList.add("playing");
+  } else {
+    weddingMusic.pause();
+    musicBtn.classList.remove("playing");
+  }
+}
+
+weddingMusic.addEventListener("ended", function() {
+  musicBtn.classList.remove("playing");
+});
 </script>
 </body>
 </html>
