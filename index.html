@@ -416,7 +416,7 @@ section{padding:90px 7%;position:relative}
   margin-top:12px;
 }
 
-footer{
+
   footer {
   background: radial-gradient(ellipse at center, #421321 0%, #260811 75%);
   color: #e8d2ad;
@@ -600,6 +600,7 @@ footer .ornament {
   </div>
 
 </div>
+  </section>
 <!-- Celebrations -->
 <section id="celebrations">
   <div class="section-heading">
@@ -695,7 +696,7 @@ footer .ornament {
 </section>
 
 <footer>
-  <footer>
+  
   <div class="footer-divider">✧ ❧ ✧</div>
 
   <div class="ganesh">॥ श्री गणेशाय नमः ॥</div>
@@ -781,19 +782,7 @@ setInterval(updateCountdown,1000);
   const weddingMusic = document.getElementById("weddingMusic");
 const musicBtn = document.getElementById("musicBtn");
 
-function toggleMusic() {
-  if (weddingMusic.paused) {
-    weddingMusic.play();
-    musicBtn.classList.add("playing");
-  } else {
-    weddingMusic.pause();
-    musicBtn.classList.remove("playing");
-  }
-}
 
-weddingMusic.addEventListener("ended", function() {
-  musicBtn.classList.remove("playing");
-});
 </script>
 </body>
 </html>
