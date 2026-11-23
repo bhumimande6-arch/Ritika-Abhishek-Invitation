@@ -90,44 +90,18 @@ section{padding:90px 7%;position:relative}
   align-items:center;
   justify-content:center;
 }
-
-.mandala-wrap::before{
-  content:"";
+.mandala-border{
   position:absolute;
   inset:0;
-  border-radius:50%;
-  background:
-    repeating-conic-gradient(
-      from 0deg,
-      #f3dfad 0deg 1deg,
-      transparent 1deg 5deg,
-      #d8b36a 5deg 6deg,
-      transparent 6deg 10deg
-    );
-  -webkit-mask:radial-gradient(
-    circle,
-    transparent 0 63%,
-    #000 64% 100%
-  );
-  mask:radial-gradient(
-    circle,
-    transparent 0 63%,
-    #000 64% 100%
-  );
-  filter:drop-shadow(0 0 5px #d8b36a);
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  z-index:3;
   pointer-events:none;
 }
 
-.mandala-wrap::after{
-  content:"";
-  position:absolute;
-  inset:5px;
-  border:1px solid #e5c47e;
-  border-radius:50%;
-  box-shadow:
-    inset 0 0 10px #d8b36a55,
-    0 0 12px #d8b36a55;
-  pointer-events:none;
+.mandala-wrap .ganpati-trigger{
+  z-index:1;
 }
 
 .mandala-wrap .ganpati-trigger{
@@ -417,15 +391,23 @@ footer p{font-size:9px;letter-spacing:3px;margin-top:18px}
     <p class="opening-small">
       Together with their families
     </p>
+<div class="mandala-wrap">
 
-   <div class="mandala-wrap">
   <div class="ganpati-trigger" onclick="openInvitation()">
     <img
-      src="photos/ganpati-round.jpg.jpeg"
+      src="photos/ganpati-round.jpg"
       alt="Shree Ganpati Bappa"
     >
   </div>
+
+  <img
+    class="mandala-border"
+    src="photos/ganpati-border.png"
+    alt=""
+  >
+
 </div>
+  
 
     <p class="tap-text">
       ✧ Click Bappa to Open ✧
