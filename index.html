@@ -723,20 +723,14 @@ const musicBtn = document.getElementById("musicBtn");
 let opened = false;
 
 function openInvitation(){
-  if(opened) return;
-  opened = true;
-  
+  opening.classList.add("hidden");
 
   music.play().then(()=>{
     musicBtn.classList.add("playing");
     musicBtn.textContent = "♫";
   }).catch(()=>{
-    musicBtn.textContent = "▶";
+    musicBtn.classList.remove("playing");
   });
-
-  setTimeout(()=>{
-    opening.classList.add("hidden");
-  },1100);
 }
 
 function toggleMusic(){
