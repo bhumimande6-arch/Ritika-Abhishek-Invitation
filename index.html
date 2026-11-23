@@ -537,7 +537,7 @@ footer p{font-size:9px;letter-spacing:3px;margin-top:18px}
 
 <script>
 const opening = document.getElementById("opening");
-const envelope = document.getElementById("envelope");
+
 const music = document.getElementById("weddingMusic");
 const musicBtn = document.getElementById("musicBtn");
 let opened = false;
@@ -545,7 +545,7 @@ let opened = false;
 function openInvitation(){
   if(opened) return;
   opened = true;
-  envelope.classList.add("open");
+  
 
   music.play().then(()=>{
     musicBtn.classList.add("playing");
