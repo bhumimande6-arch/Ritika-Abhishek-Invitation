@@ -458,7 +458,40 @@ footer .ornament {
   color: #b99a68;
   margin-top: 25px;
 }
-  
+ 
+/* Delicate Golden Petal Shower */
+
+#petal-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 21;
+}
+
+.petal {
+  position: absolute;
+  top: -20px;
+  width: 6px;
+  height: 9px;
+  border-radius: 80% 0 80% 0;
+  background: linear-gradient(135deg, #f9edc9, #c99b4c);
+  opacity: 0.3;
+  animation: petalFall linear infinite;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translate(0, -20px) rotate(0deg);
+  }
+  50% {
+    transform: translate(18px, 50vh) rotate(180deg);
+  }
+  100% {
+    transform: translate(-12px, 105vh) rotate(360deg);
+  }
+}
+ 
 /* Music button */
 #musicBtn{
   position:fixed;bottom:20px;right:20px;z-index:10;
@@ -487,7 +520,7 @@ footer .ornament {
 <body>
 
 
-
+<div id="petal-container"></div>
 <!-- Envelope opening -->
 
 <!-- Circular Ganpati Opening -->
@@ -716,6 +749,16 @@ footer .ornament {
    
 
 <script>
+const petalContainer = document.getElementById("petal-container");
+
+for (let i = 0; i < 9; i++) {
+  const petal = document.createElement("span");
+  petal.className = "petal";
+  petal.style.left = Math.random() * 100 + "vw";
+  petal.style.animationDuration = (10 + Math.random() * 10) + "s";
+  petal.style.animationDelay = (-Math.random() * 18) + "s";
+  petalContainer.appendChild(petal);
+}
 const opening = document.getElementById("opening");
 
 const music = document.getElementById("weddingMusic");
