@@ -491,7 +491,29 @@ footer .ornament {
     transform: translate(-12px, 105vh) rotate(360deg);
   }
 }
- 
+/* Falling Pink Flowers */
+
+.flower {
+  position: absolute;
+  top: -25px;
+  font-size: 13px;
+  color: #e9a0b5;
+  opacity: 0.55;
+  animation: flowerFall linear infinite;
+  filter: drop-shadow(0 1px 2px #e9a0b555);
+}
+
+@keyframes flowerFall {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+  }
+  50% {
+    transform: translate(15px, 50vh) rotate(180deg);
+  }
+  100% {
+    transform: translate(-10px, 105vh) rotate(360deg);
+  }
+} 
 /* Music button */
 #musicBtn{
   position:fixed;bottom:20px;right:20px;z-index:10;
@@ -758,6 +780,15 @@ for (let i = 0; i < 9; i++) {
   petal.style.animationDuration = (10 + Math.random() * 10) + "s";
   petal.style.animationDelay = (-Math.random() * 18) + "s";
   petalContainer.appendChild(petal);
+}
+  for (let i = 0; i < 5; i++) {
+  const flower = document.createElement("span");
+  flower.className = "flower";
+  flower.textContent = "✿";
+  flower.style.left = Math.random() * 100 + "vw";
+  flower.style.animationDuration = (12 + Math.random() * 10) + "s";
+  flower.style.animationDelay = (-Math.random() * 20) + "s";
+  petalContainer.appendChild(flower);
 }
 const opening = document.getElementById("opening");
 
