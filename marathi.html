@@ -853,5 +853,73 @@ setInterval(updateCountdown,1000);
 
 
 </script>
+  <script>
+// Marathi Website Translation
+
+const translations = {
+  ".opening-small": "आपल्या परिवारांच्या साक्षीने",
+  ".tap-text": "✧ बाप्पाच्या चरणी वंदन करून निमंत्रण उघडा ✧",
+  ".opening-bottom": "प्रेम आणि आपुलकीच्या सुंदर सोहळ्याचा उत्सव",
+
+  ".hero-invite": "बाप्पा आणि आमच्या कुटुंबीयांच्या आशीर्वादाने",
+  ".hero-sub": "दोन मने, दोन कुटुंबे आणि एका सुंदर नव्या प्रवासाची सुरुवात. आमच्या आयुष्यातील या आनंदाच्या क्षणी आपण सहकुटुंब उपस्थित राहून आमचा आनंद द्विगुणित करावा, ही नम्र विनंती.",
+  ".hero-date": "१४ · डिसेंबर · २०२६",
+  ".scroll-note": "आमंत्रण पाहण्यासाठी खाली स्क्रोल करा ↓",
+
+  "#countdown .eyebrow": "शुभ दिवस जवळ येत आहे",
+  "#countdown h2": "प्रत्येक क्षणाची आतुरता",
+  "#countdown .countdown-note": "एका सुंदर नव्या आयुष्याची सुरुवात...",
+
+  "#countdown .time-box:nth-child(1) span": "दिवस",
+  "#countdown .time-box:nth-child(2) span": "तास",
+  "#countdown .time-box:nth-child(3) span": "मिनिटे",
+  "#countdown .time-box:nth-child(4) span": "सेकंद",
+
+  "#couple .eyebrow": "दोन जीव, एक कहाणी",
+  "#couple h2": "वधू-वर परिचय",
+
+  ".person:nth-child(1) .role": "वधू",
+  ".person:nth-child(2) .role": "वर",
+
+  ".person:nth-child(1) .parents": "सौ. व श्री.\\nश्री. संदीप श्रीपत मांडे<br>& सौ. पूजा संदीप मांडे",
+  ".person:nth-child(2) .parents": "सौ. व श्री.\\nश्री. प्रकाश वामन निर्मळ<br>& सौ. पौर्णिमा प्रकाश निर्मळ",
+
+  "#celebrations .eyebrow": "शुभ तारखा लक्षात ठेवा",
+  "#celebrations h2": "मंगल कार्यक्रम",
+
+  ".event:nth-child(1) h3": "उठणे समारंभ",
+  ".event:nth-child(1) .event-time": "रविवार · १३ डिसेंबर २०२६",
+  ".event:nth-child(1) p:nth-of-type(2)": "सायंकाळी · ७:०० ते १०:००",
+  ".event:nth-child(1) p:nth-of-type(3)": "पटेल्स प्रयोशा<br>अंबरनाथ पश्चिम",
+
+  ".event:nth-child(2) h3": "हळदी समारंभ",
+  ".event:nth-child(2) .event-time": "सोमवार · १४ डिसेंबर २०२६",
+  ".event:nth-child(2) p:nth-of-type(2)": "सकाळी ८:०० ते ९:००",
+  ".event:nth-child(2) p:nth-of-type(3)": "हॉटेल कशिश इंटरनॅशनल<br>कल्याण (पूर्व)",
+
+  ".event:nth-child(3) h3": "शुभ विवाह मुहूर्त",
+  ".event:nth-child(3) .event-time": "सोमवार · १४ डिसेंबर २०२६",
+  ".event:nth-child(3) p:nth-of-type(3)": "आपल्या सहजीवनाच्या सुंदर प्रवासाची सुरुवात",
+
+  "#venue .eyebrow": "आपली उपस्थिती प्रार्थनीय",
+  "#venue h2": "विवाहस्थळ",
+  ".venue-card h3": "हॉटेल कशिश इंटरनॅशनल",
+  ".venue-card p": "मलंग रोड, अनमोल गार्डनजवळ,<br>नांदिवली गाव, कल्याण (पूर्व) – ४२१३०६,<br>महाराष्ट्र, भारत.",
+  ".map-link": "मार्ग शोधा ↗",
+
+  ".contact-heading": "आपल्याशी संवाद साधण्यास आम्हाला आनंद होईल",
+  ".contact-description": "अधिक माहिती किंवा मदतीसाठी कृपया निःसंकोच संपर्क साधावा.",
+
+  ".footer-couple-art + p": "रितिका & अभिषेक",
+  "footer p:not(.script)": "१४ डिसेंबर २०२६ · प्रेम आणि आशीर्वादासह"
+};
+
+Object.entries(translations).forEach(([selector, value]) => {
+  const elements = document.querySelectorAll(selector);
+  elements.forEach(element => {
+    element.innerHTML = value.replace(/\\n/g, "<br>");
+  });
+});
+  </script>
 </body>
 </html>
