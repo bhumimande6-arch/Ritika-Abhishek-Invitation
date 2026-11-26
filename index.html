@@ -537,6 +537,63 @@ opacity: 0.85;
   .person{padding:35px 20px}
   .event{padding:28px 16px}
 }
+  
+/* Blessings Button */
+.blessings-wrap {
+  text-align: center;
+  margin: 35px auto 10px;
+  padding: 10px 15px;
+}
+
+.blessings-btn {
+  background: linear-gradient(135deg, #f5e6c8, #d6b16b);
+  color: #4b101f;
+  border: 1px solid #b08a45;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(176, 138, 69, 0.25);
+  transition: all 0.3s ease;
+}
+
+.blessings-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(176, 138, 69, 0.4);
+}
+
+.blessings-note {
+  color: #b08a45;
+  font-size: 13px;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* Falling Flowers */
+.blessing-flower {
+  position: fixed;
+  top: -50px;
+  z-index: 99999;
+  pointer-events: none;
+  animation: flowerFall linear forwards;
+}
+
+@keyframes flowerFall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
 </style>
 </head>
 
@@ -656,6 +713,12 @@ opacity: 0.85;
     </p>
   </div>
 
+</div>
+  <div class="blessings-wrap">
+  <button id="blessingsBtn" class="blessings-btn" type="button">
+    🌸 Send Your Blessings 🌸
+  </button>
+  <p class="blessings-note">Shower the couple with your love & blessings</p>
 </div>
   </section>
 <!-- Celebrations -->
@@ -853,5 +916,39 @@ setInterval(updateCountdown,1000);
 
 
 </script>
+  
+<script>
+let blessingClicks = 0;
+
+const blessingsBtn = document.getElementById("blessingsBtn");
+
+const flowerTypes = ["🌸", "🌹", "🌼", "🌺", "🪷", "🌻", "💮"];
+
+blessingsBtn.addEventListener("click", function () {
+  blessingClicks++;
+
+  const flowerCount = 20 * blessingClicks;
+
+  for (let i = 0; i < flowerCount; i++) {
+    const flower = document.createElement("span");
+
+    flower.className = "blessing-flower";
+    flower.textContent =
+      flowerTypes[Math.floor(Math.random() * flowerTypes.length)];
+
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.fontSize = (18 + Math.random() * 22) + "px";
+    flower.style.animationDuration = (3 + Math.random() * 4) + "s";
+    flower.style.animationDelay = Math.random() * 1.5 + "s";
+
+    document.body.appendChild(flower);
+
+    setTimeout(() => {
+      flower.remove();
+    }, 9000);
+  }
+});
+</script>
+
 </body>
 </html>
