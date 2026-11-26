@@ -92,7 +92,8 @@ section{padding:90px 7%;position:relative}
   justify-content:center;
 }
 .mandala-border{
-  
+  animation: slowMandalaRotate 30s linear infinite;
+transform-origin: center;
   position:absolute;
   inset:0;
   width:100%;
@@ -624,7 +625,14 @@ opacity: 0.85;
   from { text-shadow: 0 0 5px rgba(243, 223, 173, 0.3); }
   to { text-shadow: 0 0 16px rgba(243, 223, 173, 0.9); }
 }
-
+@keyframes slowMandalaRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 </style>
 </head>
 
